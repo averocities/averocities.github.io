@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Averocity • Collective Decision-Making Engine</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        }
+        .epistent-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
+        .coming-soon {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        .influence-glow {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- "Coming Soon" Banner -->
+    <div class="bg-purple-900 text-white text-center py-3">
+        <p class="font-semibold coming-soon"><i class="fas fa-hourglass-half mr-2"></i>Coming Soon...</p>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Main Title -->
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6">Averocity</h1>
+            <p class="text-lg uppercase tracking-widest opacity-80 mb-2">Collective Decision-Making Engine</p>
+            
+            <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-6 leading-relaxed">
+                Transform collaborative democracy through dynamic meritocracy. Where the best ideas rise, not just the most popular ones.
+            </p>
+            
+            <!-- Value Proposition -->
+            <div class="max-w-5xl mx-auto bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 mb-10 border border-white border-opacity-20">
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+                    Beyond simple voting. A sophisticated system that weights influence by proven expertise and past contribution impact.
+                </p>
+                <p class="text-sm opacity-70 mt-4">A governance engine for DAOs, companies, and any organization seeking better decisions.</p>
+            </div>
+
+            <!-- Integration Badges -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="inline-flex items-center bg-white bg-opacity-20 text-purple-200 px-4 py-2 rounded-full">
+                    <i class="fas fa-brain mr-2"></i>
+                    <span>Optional Epistent Integration</span>
+                </div>
+                <div class="inline-flex items-center bg-white bg-opacity-20 text-purple-200 px-4 py-2 rounded-full">
+                    <i class="fas fa-project-diagram mr-2"></i>
+                    <span>Powers Capslice & Mirabilary</span>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-4">
+                <a href="#how-it-works" class="bg-white text-purple-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">How It Works</a>
+                <a href="#problem" class="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">The Problem</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">The Flaws in Collective Decision-Making</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Problem Card -->
+                <div class="bg-red-50 p-8 rounded-2xl shadow-md">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 text-2xl mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-red-800">The Popularity Contest</h3>
+                    <p class="text-gray-700 mb-4">Traditional voting systems suffer from:</p>
+                    <ul class="text-gray-600 list-disc pl-5 space-y-2">
+                        <li>Groupthink and herd mentality</li>
+                        <li>Loudest voice wins, not best idea</li>
+                        <li>No consideration of voter expertise</li>
+                        <li>Susceptible to manipulation and brigading</li>
+                    </ul>
+                </div>
+
+                <!-- Consequence Card -->
+                <div class="bg-amber-50 p-8 rounded-2xl shadow-md">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 text-2xl mb-6">
+                        <i class="fas fa-chart-line-down"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">The Cost of Poor Decisions</h3>
+                    <p class="text-gray-700 mb-4">When bad ideas win, organizations suffer:</p>
+                    <ul class="text-gray-600 list-disc pl-5 space-y-2">
+                        <li>Missed opportunities and wasted resources</li>
+                        <li>Decreased trust in collective processes</li>
+                        <li>Expert disengagement and brain drain</li>
+                        <li>Slow innovation and adaptation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">The Averocity Difference</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Nuanced Voting Scale</h3>
+                    <p class="text-gray-600">Participants vote on proposals using a detailed -5 to +5 scale, capturing subtle opinions beyond simple yes/no.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md card-hover influence-glow">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Dynamic Influence Scoring</h3>
+                    <p class="text-gray-600">Each user's vote is weighted by their live "Influence Score"—a sophisticated composite of proven expertise and past contribution impact.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Merit-Based Outcomes</h3>
+                    <p class="text-gray-600">By prioritizing the weighted judgment of the most proven contributors, Averocity intelligently surfaces the best ideas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Influence Score Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">The Influence Score Engine</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-purple-50 rounded-2xl p-8 mb-12">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">How We Calculate True Influence</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Score Component 1 -->
+                        <div class="bg-white p-6 rounded-xl text-center card-hover">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-lg mb-4 mx-auto">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Cognitive Proficiency</h4>
+                            <p class="text-sm text-gray-600">Verified through optional Epistent integration</p>
+                            <div class="mt-3 text-xs text-blue-600">Optional Component</div>
+                        </div>
+
+                        <!-- Score Component 2 -->
+                        <div class="bg-white p-6 rounded-xl text-center card-hover">
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-lg mb-4 mx-auto">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Contribution Impact</h4>
+                            <p class="text-sm text-gray-600">Measured success of past proposals and contributions</p>
+                        </div>
+
+                        <!-- Score Component 3 -->
+                        <div class="bg-white p-6 rounded-xl text-center card-hover">
+                            <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 text-lg mb-4 mx-auto">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Peer Assessment</h4>
+                            <p class="text-sm text-gray-600">Community evaluation of expertise and reliability</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Nature -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Live, Dynamic Scoring</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Influence Scores update in real-time based on recent contributions, ensuring current expertise is always weighted appropriately in decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Epistent Integration Section -->
+    <section class="py-20 epistent-gradient text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Enhanced with Epistent</h2>
+                    <p class="text-xl opacity-90">Optional cognitive proficiency verification for maximum decision quality</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Benefits -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                        <h3 class="text-2xl font-semibold mb-4">Cognitive Meritocracy</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-300 mt-1 mr-3"></i>
+                                <span>Verified reasoning ability and critical thinking skills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-300 mt-1 mr-3"></i>
+                                <span>Objective measure of problem-solving capability</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-300 mt-1 mr-3"></i>
+                                <span>Resistance to cognitive biases in decision-making</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-300 mt-1 mr-3"></i>
+                                <span>Science-backed influence weighting</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Integration Details -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                        <h3 class="text-2xl font-semibold mb-4">Flexible Integration</h3>
+                        <p class="mb-4 opacity-90">Averocity delivers immense value standalone, but organizations can optionally enable Epistent integration for:</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-rocket mr-3 text-purple-300"></i>
+                                <span>High-stakes decision environments</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-flask mr-3 text-purple-300"></i>
+                                <span>Research and scientific organizations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-shield-alt mr-3 text-purple-300"></i>
+                                <span>Maximum decision quality assurance</span>
+                            </li>
+                        </ul>
+                        <div class="p-4 bg-purple-500 bg-opacity-20 rounded-lg">
+                            <p class="text-sm"><strong>Note:</strong> Epistent integration is completely optional. Averocity's core influence scoring works powerfully with just contribution history and peer assessment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">Where Averocity Excels</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Use Case 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">DAO Governance</h3>
+                    <p class="text-gray-600">Ensure decentralized organizations make quality decisions by weighting votes based on contributor expertise and track record.</p>
+                </div>
+
+                <!-- Use Case 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Corporate Innovation</h3>
+                    <p class="text-gray-600">Surface the best ideas from your team by ensuring domain experts have appropriate influence in decision processes.</p>
+                </div>
+
+                <!-- Use Case 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 text-xl mb-4">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Team Decisions</h3>
+                    <p class="text-gray-600">From small startups to large organizations, make better collective choices with weighted expertise.</p>
+                </div>
+
+                <!-- Use Case 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover">
+                    <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 text-xl mb-4">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Community Platforms</h3>
+                    <p class="text-gray-600">Help online communities self-moderate and prioritize valuable contributions through intelligent influence scoring.</p>
+                </div>
+
+                <!-- Use Case 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover">
+                    <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 text-xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Research Collaboration</h3>
+                    <p class="text-gray-600">Academic and research groups can make better collective decisions by weighting input based on proven expertise.</p>
+                </div>
+
+                <!-- Use Case 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 text-xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Partnership Decisions</h3>
+                    <p class="text-gray-600">Evaluate potential partnerships and collaborations with input weighted by team members' relevant experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Integration Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">The Heart of the Lumenforge Ecosystem</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Powers Capslice -->
+                    <div class="bg-teal-50 p-6 rounded-2xl border border-teal-200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 mr-3">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Powers Capslice</h3>
+                        </div>
+                        <p class="text-gray-600">Averocity provides the collective intelligence layer for Capslice's dynamic equity management, enabling teams to validate contributions fairly.</p>
+                    </div>
+
+                    <!-- Core to Mirabilary -->
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mr-3">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Core to Mirabilary</h3>
+                        </div>
+                        <p class="text-gray-600">Serves as the trust validation engine in Mirabilary's funding platform, weighing expert opinions to evaluate startup viability.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        While integrated throughout the ecosystem, Averocity stands strong as a standalone decision-making platform for any organization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Transform Your Collective Intelligence</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">
+                Move beyond simple democracy to dynamic meritocracy. Make better decisions by valuing expertise, not just volume.
+            </p>
+            <a href="#" class="bg-white text-purple-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-block">Start Making Smarter Decisions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="font-serif text-2xl mb-2">Averocity</h3>
+            <p class="opacity-80 mb-8">Collective Decision-Making Engine</p>
+            
+            <!-- Platform Links -->
+            <div class="mb-6">
+                <h4 class="font-semibold mb-3">Part of the Lumenforge Ecosystem</h4>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="../audacea/" class="text-purple-300 hover:text-purple-100 transition">Audacea</a>
+                    <a href="../capslice/" class="text-purple-300 hover:text-purple-100 transition">Capslice</a>
+                    <a href="../epistent/" class="text-purple-300 hover:text-purple-100 transition">Epistent</a>
+                    <a href="../mirabilary/" class="text-purple-300 hover:text-purple-100 transition">Mirabilary</a>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="mb-8">
+                <h4 class="font-semibold mb-3">Contact</h4>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                    <a href="mailto:hamza@boukhtam.com" class="flex items-center hover:underline">
+                        <i class="fas fa-envelope mr-2"></i> hamza@boukhtam.com
+                    </a>
+                    <a href="tel:+213550877577" class="flex items-center hover:underline">
+                        <i class="fas fa-phone mr-2"></i> +213 550 877 577
+                    </a>
+                </div>
+                <p class="mt-2 text-sm opacity-80">Hamza Boukhtam</p>
+            </div>
+            
+            <p class="text-sm opacity-70">© 2025 Averocity. Intelligent collective decision-making for modern organizations.</p>
+        </div>
+    </footer>
+</body>
+</html>
